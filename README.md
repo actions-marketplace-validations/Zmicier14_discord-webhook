@@ -1,4 +1,4 @@
-# Discord Webhook Notify
+# Discord Webhook Notifications
 
 This sends a notification to discord using a webhook URL. It is written in JavaScript so **it will work with windows, osx, and linux execution environments**.
 
