@@ -8,7 +8,7 @@ To use this, get on Discord and create a new webhook. Then get on GitHub, go int
 - Use `rjstone/discord-webhook-notify@v1.0.0` (or another specific tag after the @) if you want to guarantee use of a specific revision.
 
 See below for more documentation and detailed examples.
-
+ 
 ## Inputs
 
 ### `webhookUrl`
