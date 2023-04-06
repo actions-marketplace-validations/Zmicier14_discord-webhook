@@ -1,4 +1,5 @@
 name: Discord Webhook Notification
+author: Zmicier
 description: >
   Send notifications to Discord using a webhook.
   Works with all execution environments including windows, macos, and linux.
