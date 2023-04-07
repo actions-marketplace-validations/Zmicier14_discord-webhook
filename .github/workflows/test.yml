@@ -7,25 +7,25 @@ jobs:
     name: Linux Test Job
     steps:
     - name: Linux Test Info
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: info
         details: Test succeeded.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Warn
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: warn
         details: Test warning.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Error
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: error
         details: Test error.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Custom
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: info
         username: CustomUsername
@@ -37,19 +37,19 @@ jobs:
         text: This is where text goes.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Success
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: success()
       with:
         severity: info
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Failure
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: failure()
       with:
         severity: error
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Cancelled
-      uses: Zmicier14/discord-webhook@v1.0.5
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: cancelled()
       with:
         severity: warn
