@@ -50,7 +50,6 @@ async function getDefaultDescription() {
             + `- **Workflow:** ${context.workflow}\n`
             + `- **Commit URL:** ${context.workflow_sha}\n`
             + `- **Workflof ref:** ${context.workflow_ref}\n`
-            + `- **Commit Message:** ${payload.head_commit.message}\n`
             ;
     default:
         return `- **Event:** ${context.eventName}\n`
