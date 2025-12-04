@@ -48,10 +48,8 @@ async function getDefaultDescription() {
             + `- **Repo:** ${payload.repository.full_name}\n`
             + `- **Ref:** ${payload.ref}\n`
             + `- **Workflow:** ${context.workflow}\n`
-            + `- **Committer:** ${payload.head_commit.committer.name}\n`
-            + `- **Pusher:** ${payload.pusher.name}\n`
-            + `- **Commit URL:** ${payload.head_commit.url}\n`
-            + `- **Commit Message:** ${payload.head_commit.message}\n`
+            + `- **Commit URL:** ${payload.workflow_sha}\n`
+            + `- **Workflof ref:** ${payload.workflow_ref}\n`
             ;
     default:
         return `- **Event:** ${context.eventName}\n`

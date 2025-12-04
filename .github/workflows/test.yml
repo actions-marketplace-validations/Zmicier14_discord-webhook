@@ -1,86 +1,31 @@
 name: Test Action
 on: 
-  push:
-    branches:
-      - '**'
   workflow_dispatch:
 jobs:
-  windows_test:
-    runs-on: windows-latest
-    name: Windows Test Job
-    steps:
-    - name: Windows Test Info
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: info
-        details: Test succeeded.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Warn
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: warn
-        details: Test warning.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Error
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: error
-        details: Test error.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Custom
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: info
-        username: CustomUsername
-        color: '#ff00aa'
-        avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
-        description: This is a custom description.
-        details: 'Custom details: Somebody set up us the bomb.'
-        footer: This is a footer.
-        text: This is where text goes.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Success
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: success()
-      with:
-        severity: info
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Failure
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: failure()
-      with:
-        severity: error
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: Windows Test Cancelled
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: cancelled()
-      with:
-        severity: warn
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   linux_test:
     runs-on: ubuntu-latest
     name: Linux Test Job
     steps:
     - name: Linux Test Info
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: info
         details: Test succeeded.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Warn
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: warn
         details: Test warning.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Error
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: error
         details: Test error.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Custom
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       with:
         severity: info
         username: CustomUsername
@@ -92,71 +37,19 @@ jobs:
         text: This is where text goes.
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Success
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: success()
       with:
         severity: info
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Failure
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: failure()
       with:
         severity: error
         webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Linux Test Cancelled
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: cancelled()
-      with:
-        severity: warn
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-  macos_test:
-    runs-on: macos-latest
-    name: MacOS Test Job
-    steps:
-    - name: MacOS Test Info
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: info
-        details: Test succeeded.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Warn
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: warn
-        details: Test warning.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Error
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: error
-        details: Test error.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Custom
-      uses: Zmicier14/discord-webhook@v1.0.1
-      with:
-        severity: info
-        username: CustomUsername
-        color: '#ff00aa'
-        avatarUrl: https://github.githubassets.com/images/modules/logos_page/Octocat.png
-        description: This is a custom description.
-        details: 'Custom details: Somebody set up us the bomb.'
-        footer: This is a footer.
-        text: This is where text goes.
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Success
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: success()
-      with:
-        severity: info
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Failure
-      uses: Zmicier14/discord-webhook@v1.0.1
-      if: failure()
-      with:
-        severity: error
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-    - name: MacOS Test Cancelled
-      uses: Zmicier14/discord-webhook@v1.0.1
+      uses: Zmicier14/discord-webhook@v1.0.6
       if: cancelled()
       with:
         severity: warn
